@@ -14,12 +14,14 @@
                     <h2 class="section-heading">{{ .Title }}</h2>
                     {{ .Content }}
                 </div>
-                {{ with .Params.img }}
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    {{ with .Params.img }}
                     <img class="img-responsive" src="img/{{ . }}" alt="">
-		    <a href={{ printf "%s" $.Params.applink }}><img class="img-responsive" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+                    {{ end }}
+                    {{ with .Params.applink }}
+		    <a href="{{ . }}"><img class="img-responsive" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+                    {{ end }}
                 </div>
-                {{ end }}
             </div>
 
         </div>
@@ -40,12 +42,14 @@
                     <h2 class="section-heading">{{ .Title }}</h2>
                     {{ .Content }}
                 </div>
-                {{ with .Params.img }}
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                  <img class="img-responsive" src="img/{{ . }}" alt="">
-		    <a href={{ printf "%s" $.Params.applink }}><img class="img-responsive" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+                    {{ with .Params.img }}
+                    <img class="img-responsive" src="img/{{ . }}" alt="">
+                    {{ end }}
+                    {{ with .Params.applink }}
+		    <a href="{{ . }}"><img class="img-responsive" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+                    {{ end }}
                 </div>
-                {{ end }}
             </div>
 
         </div>
