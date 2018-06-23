@@ -25,11 +25,9 @@
                         <a class="page-scroll" href="#pricing">Pricing</a>
                     </li>
                 {{ end }}
-		{{ if (fileExists "content/privacy.md") -}}
 		<li>
 			<a href="{{ < ref privacy.md > }}">Privacy Policy</a>
 		</li>
-                {{- end }}
                 {{ if isset .Site.Params "social" }}
                 <li>
                     <a class="page-scroll" href="#contact">Contact</a>
